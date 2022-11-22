@@ -1,0 +1,118 @@
+body{
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: conic-gradient(from .5turn at bottom center, lightblue, white);
+}
+
+.container{
+    /* border: 1px solid black; */
+    height: 100vh;
+    width: 95%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    border: 1px solid lightgray;
+    background: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    width: 400px;
+    margin: auto;
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 0 25px;
+}
+
+.calculator input{
+    box-sizing: border-box;
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.calculator button{
+    width: 10%;
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background: whitesmoke;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 0;
+}
+
+.calculator button:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#quality{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 100%;
+    padding: 8px;
+    outline: none;
+
+}
+
+#tip-amount{
+    visibility: hidden;
+    min-width: 250px;
+    margin: auto;
+    background-color: lightseagreen;
+    color: white;
+    bottom: 30px;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+}
+
+#tip-amount.show{
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein{
+    from{bottom: 0;opacity: 0;}
+    to{bottom: 30px;opacity: 1;}
+}
+
+@keyframes fadein{
+    from{bottom: 0;opacity: 0;}
+    to{bottom: 30px;opacity: 1;}
+}
+
+@-webkit-keyframes fadeout{
+    from{bottom: 30;opacity: 1;}
+    to{bottom: 0px;opacity: 0;}
+}
+
+@keyframes fadeout{
+    from{bottom: 30;opacity: 1;}
+    to{bottom: 0px;opacity: 0;}
+}
+
+@media(max-width:480px){
+    .calculator input{
+        width : 85%;
+    }
+
+    .calculator button{
+        width: 15%;
+    }
+}
+
+@media(max-width:320px){
+    .calculator input{
+        width : 80%;
+    }
+}
